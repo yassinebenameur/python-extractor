@@ -1,0 +1,7972 @@
+$TCF generated from XLStoTCF_ISIT v1.0.17
+
+   # Begin Text
+       Developer : N.A.
+       Tester : Mohamed ZRIBI
+   # End Text
+
+# Begin Properties
+   IBox = Light Grey 
+# End Properties
+
+# Begin Attributes
+
+   Sequence Name = 001_HAL_NVM_Run
+   Language Code = 2
+
+# End Attributes
+
+# Begin Test Case
+
+   File = HAL_NVM.c
+   Procedure = HAL_NVM_Run
+   Procedure Number = 1
+   Creation Date =  23 Apr 2020 16:23:16 
+   Description = 001_tc_001
+
+   # Begin Text
+       HAL_NVM_eSequencerStatus  = = HAL_NVM_STATUS_IDLE   and HAL_NVM_bWriteStarted == FALSE_T and HAL_NVM_u08StepIndex == ZERO
+   # End Text
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = G
+       Value = HAL_NVM_STATUS_IDLE
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = G
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = G
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = G
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[0]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[1]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[2]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[3]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[4]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[5]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[6]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[7]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[8]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[9]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[10]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[11]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[12]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[13]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[14]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[15]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[16]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[17]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[18]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[19]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[20]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[21]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[22]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[23]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[24]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[25]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[26]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[27]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[28]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[29]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[30]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[31]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = H
+       Value = HAL_NVM_STATUS_IDLE
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = H
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = H
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = H
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = %
+
+       Decl_type = BOOL
+
+       Usage = O
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin TC Stub
+
+       Procedure = HAL_NVM__EEPROMWriteIsFinished
+       Overloading = Prototype
+
+   # Begin Overloading
+
+
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ReadByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ProgramByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+ uint8_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+# End Test Case
+
+# Begin Test Case
+
+   File = HAL_NVM.c
+   Procedure = HAL_NVM_Run
+   Procedure Number = 1
+   Creation Date =  23 Apr 2020 16:23:16 
+   Description = 001_tc_002
+
+   # Begin Text
+       HAL_NVM_eSequencerStatus  = = HAL_NVM_STATUS_WRITE_REQUESTED  and HAL_NVM_bWriteStarted == TRUE_T and HAL_NVM_u08StepIndex == ZERO
+   # End Text
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = G
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = G
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = G
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = G
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[0]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[1]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[2]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[3]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[4]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[5]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[6]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[7]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[8]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[9]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[10]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[11]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[12]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[13]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[14]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[15]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[16]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[17]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[18]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[19]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[20]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[21]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[22]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[23]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[24]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[25]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[26]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[27]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[28]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[29]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[30]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[31]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = H
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = H
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = H
+       Value = 1
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = H
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = %
+
+       Decl_type = BOOL
+
+       Usage = O
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin TC Stub
+
+       Procedure = HAL_NVM__EEPROMWriteIsFinished
+       Overloading = Prototype
+
+   # Begin Overloading
+
+
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ReadByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ProgramByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+ uint8_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+# End Test Case
+
+# Begin Test Case
+
+   File = HAL_NVM.c
+   Procedure = HAL_NVM_Run
+   Procedure Number = 1
+   Creation Date =  23 Apr 2020 16:23:16 
+   Description = 001_tc_003
+
+   # Begin Text
+       HAL_NVM_eSequencerStatus  = = HAL_NVM_STATUS_WRITE_REQUESTED  and HAL_NVM_bWriteStarted == TRUE_T and HAL_NVM_u08StepIndex == 33
+   # End Text
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = G
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = G
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = G
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 33
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[0]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[1]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[2]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[3]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[4]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[5]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[6]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[7]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[8]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[9]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[10]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[11]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[12]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[13]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[14]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[15]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[16]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[17]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[18]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[19]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[20]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[21]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[22]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[23]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[24]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[25]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[26]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[27]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[28]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[29]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[30]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[31]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = H
+       Value = HAL_NVM_STATUS_IDLE
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = H
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = H
+       Value = 33
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = H
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = %
+
+       Decl_type = BOOL
+
+       Usage = O
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin TC Stub
+
+       Procedure = HAL_NVM__EEPROMWriteIsFinished
+       Overloading = Prototype
+
+   # Begin Overloading
+
+
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ReadByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ProgramByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+ uint8_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+# End Test Case
+
+# Begin Test Case
+
+   File = HAL_NVM.c
+   Procedure = HAL_NVM_Run
+   Procedure Number = 1
+   Creation Date =  23 Apr 2020 16:23:16 
+   Description = 001_tc_004
+
+   # Begin Text
+       HAL_NVM_eSequencerStatus  = = HAL_NVM_STATUS_WRITE_REQUESTED  and HAL_NVM_bWriteStarted == TRUE_T and HAL_NVM_u08StepIndex == 127 and HAL_NVM__EEPROMWriteIsFinished() return FALSE_T
+   # End Text
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = G
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = G
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = G
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 127
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[0]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[1]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[2]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[3]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[4]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[5]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[6]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[7]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[8]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[9]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[10]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[11]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[12]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[13]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[14]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[15]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[16]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[17]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[18]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[19]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[20]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[21]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[22]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[23]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[24]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[25]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[26]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[27]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[28]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[29]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[30]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[31]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = H
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = H
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = H
+       Value = 127
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = H
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = %
+
+       Decl_type = BOOL
+
+       Usage = O
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin TC Stub
+
+       Procedure = HAL_NVM__EEPROMWriteIsFinished
+       Hit Order = 1
+       Overloading = Prototype
+
+   # Begin Overloading
+
+
+
+   # End Overloading
+
+   # Begin TC Stub TC Hit Count
+
+       Setting = 3
+       Specified = 1
+
+   # End TC Stub TC Hit Count
+
+   # Begin TC Stub Return Value
+
+       Name =%
+       Type = BOOL
+       Value = FALSE_T
+
+   # End TC Stub Return Value
+
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ReadByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ProgramByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+ uint8_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+# End Test Case
+
+# Begin Test Case
+
+   File = HAL_NVM.c
+   Procedure = HAL_NVM_Run
+   Procedure Number = 1
+   Creation Date =  23 Apr 2020 16:23:16 
+   Description = 001_tc_005
+
+   # Begin Text
+       HAL_NVM_eSequencerStatus  = = HAL_NVM_STATUS_WRITE_REQUESTED  and HAL_NVM_bWriteStarted == TRUE_T and HAL_NVM_u08StepIndex == 127 and HAL_NVM__EEPROMWriteIsFinished() return TRUE_T
+   # End Text
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = G
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = G
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = G
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 127
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[0]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[1]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[2]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[3]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[4]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[5]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[6]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[7]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[8]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[9]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[10]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[11]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[12]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[13]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[14]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[15]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[16]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[17]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[18]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[19]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[20]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[21]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[22]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[23]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[24]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[25]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[26]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[27]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[28]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[29]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[30]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[31]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = H
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = H
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = H
+       Value = 128
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = H
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = %
+
+       Decl_type = BOOL
+
+       Usage = O
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin TC Stub
+
+       Procedure = HAL_NVM__EEPROMWriteIsFinished
+       Hit Order = 1
+       Overloading = Prototype
+
+   # Begin Overloading
+
+
+
+   # End Overloading
+
+   # Begin TC Stub TC Hit Count
+
+       Setting = 3
+       Specified = 1
+
+   # End TC Stub TC Hit Count
+
+   # Begin TC Stub Return Value
+
+       Name =%
+       Type = BOOL
+       Value = TRUE_T
+
+   # End TC Stub Return Value
+
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ReadByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ProgramByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+ uint8_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+# End Test Case
+
+# Begin Test Case
+
+   File = HAL_NVM.c
+   Procedure = HAL_NVM_Run
+   Procedure Number = 1
+   Creation Date =  23 Apr 2020 16:23:16 
+   Description = 001_tc_006
+
+   # Begin Text
+       HAL_NVM_eSequencerStatus  = = HAL_NVM_STATUS_WRITE_REQUESTED  and HAL_NVM_bWriteStarted == TRUE_T and HAL_NVM_u08StepIndex == 255 and HAL_NVM__EEPROMWriteIsFinished() return TRUE_T
+   # End Text
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = G
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = G
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = G
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 255
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[0]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[1]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[2]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[3]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[4]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[5]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[6]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[7]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[8]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[9]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[10]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[11]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[12]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[13]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[14]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[15]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[16]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[17]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[18]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[19]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[20]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[21]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[22]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[23]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[24]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[25]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[26]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[27]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[28]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[29]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[30]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[31]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = H
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = H
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = H
+       Value = 0
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = H
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = %
+
+       Decl_type = BOOL
+
+       Usage = O
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin TC Stub
+
+       Procedure = HAL_NVM__EEPROMWriteIsFinished
+       Hit Order = 1
+       Overloading = Prototype
+
+   # Begin Overloading
+
+
+
+   # End Overloading
+
+   # Begin TC Stub TC Hit Count
+
+       Setting = 3
+       Specified = 1
+
+   # End TC Stub TC Hit Count
+
+   # Begin TC Stub Return Value
+
+       Name =%
+       Type = BOOL
+       Value = TRUE_T
+
+   # End TC Stub Return Value
+
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ReadByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ProgramByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+ uint8_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+# End Test Case
+
+# Begin Test Case
+
+   File = HAL_NVM.c
+   Procedure = HAL_NVM_Run
+   Procedure Number = 1
+   Creation Date =  23 Apr 2020 16:23:16 
+   Description = 001_tc_007
+
+   # Begin Text
+       HAL_NVM_eSequencerStatus  = = HAL_NVM_STATUS_WRITE_REQUESTED  and HAL_NVM_bWriteStarted == FALSE_T  and HAL_NVM_u08StepIndex == ZERO
+   # End Text
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = G
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = G
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = G
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = G
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[0]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[1]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[2]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[3]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[4]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[5]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[6]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[7]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[8]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[9]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[10]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[11]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[12]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[13]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[14]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[15]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[16]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[17]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[18]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[19]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[20]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[21]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[22]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[23]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[24]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[25]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[26]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[27]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[28]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[29]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[30]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[31]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = H
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = H
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = H
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = H
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = %
+
+       Decl_type = BOOL
+
+       Usage = O
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin TC Stub
+
+       Procedure = HAL_NVM__EEPROMWriteIsFinished
+       Overloading = Prototype
+
+   # Begin Overloading
+
+
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ReadByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ProgramByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+ uint8_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+# End Test Case
+
+# Begin Test Case
+
+   File = HAL_NVM.c
+   Procedure = HAL_NVM_Run
+   Procedure Number = 1
+   Creation Date =  23 Apr 2020 16:23:16 
+   Description = 001_tc_008
+
+   # Begin Text
+       HAL_NVM_eSequencerStatus  = = HAL_NVM_STATUS_WRITE_REQUESTED  and HAL_NVM_bWriteStarted == FALSE_T  and HAL_NVM_u08StepIndex == 33
+   # End Text
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = G
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = G
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = G
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 33
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[0]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[1]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[2]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[3]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[4]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[5]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[6]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[7]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[8]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[9]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[10]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[11]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[12]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[13]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[14]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[15]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[16]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[17]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[18]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[19]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[20]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[21]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[22]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[23]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[24]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[25]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[26]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[27]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[28]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[29]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[30]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[31]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = H
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = H
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = H
+       Value = 33
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = H
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = %
+
+       Decl_type = BOOL
+
+       Usage = O
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin TC Stub
+
+       Procedure = HAL_NVM__EEPROMWriteIsFinished
+       Overloading = Prototype
+
+   # Begin Overloading
+
+
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ReadByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ProgramByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+ uint8_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+# End Test Case
+
+# Begin Test Case
+
+   File = HAL_NVM.c
+   Procedure = HAL_NVM_Run
+   Procedure Number = 1
+   Creation Date =  23 Apr 2020 16:23:16 
+   Description = 001_tc_009
+
+   # Begin Text
+       HAL_NVM_eSequencerStatus  = = HAL_NVM_STATUS_WRITE_REQUESTED  and HAL_NVM_bWriteStarted == FALSE_T  and HAL_NVM_u08StepIndex == 15 and FLASH_ReadByte() return 0
+   # End Text
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = G
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = G
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = G
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 15
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[0]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[1]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[2]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[3]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[4]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[5]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[6]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[7]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[8]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[9]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[10]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[11]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[12]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[13]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[14]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[15]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[16]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[17]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[18]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[19]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[20]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[21]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[22]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[23]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[24]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[25]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[26]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[27]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[28]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[29]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[30]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[31]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = H
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = H
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = H
+       Value = 33
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = H
+       Value = 18
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = %
+
+       Decl_type = BOOL
+
+       Usage = O
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin TC Stub
+
+       Procedure = HAL_NVM__EEPROMWriteIsFinished
+       Overloading = Prototype
+
+   # Begin Overloading
+
+
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ReadByte
+       Hit Order = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+
+   # End Overloading
+
+   # Begin TC Stub TC Hit Count
+
+       Setting = 3
+       Specified = 18
+
+   # End TC Stub TC Hit Count
+
+   # Begin TC Stub Input Params
+
+       Name = Address
+       Type = uint32_t
+       Value = 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
+       Compare = 
+
+   # End TC Stub Input Params
+
+
+   # Begin TC Stub Return Value
+
+       Name =%
+       Type = uint8_t
+       Value = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+   # End TC Stub Return Value
+
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ProgramByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+ uint8_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+# End Test Case
+
+# Begin Test Case
+
+   File = HAL_NVM.c
+   Procedure = HAL_NVM_Run
+   Procedure Number = 1
+   Creation Date =  23 Apr 2020 16:23:16 
+   Description = 001_tc_010
+
+   # Begin Text
+       HAL_NVM_eSequencerStatus  = = HAL_NVM_STATUS_WRITE_REQUESTED  and HAL_NVM_bWriteStarted == FALSE_T  and HAL_NVM_u08StepIndex == 15 and FLASH_ReadByte() return 255
+   # End Text
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = G
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = G
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = G
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 15
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[0]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[1]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[2]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[3]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[4]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[5]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[6]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[7]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[8]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[9]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[10]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[11]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[12]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[13]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[14]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[15]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[16]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[17]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[18]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[19]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[20]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[21]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[22]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[23]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[24]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[25]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[26]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[27]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[28]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[29]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[30]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[31]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = H
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = H
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = H
+       Value = 15
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = H
+       Value = 1
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = %
+
+       Decl_type = BOOL
+
+       Usage = O
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin TC Stub
+
+       Procedure = HAL_NVM__EEPROMWriteIsFinished
+       Overloading = Prototype
+
+   # Begin Overloading
+
+
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ReadByte
+       Hit Order = 1,3
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+
+   # End Overloading
+
+   # Begin TC Stub TC Hit Count
+
+       Setting = 3
+       Specified = 2
+
+   # End TC Stub TC Hit Count
+
+   # Begin TC Stub Input Params
+
+       Name = Address
+       Type = uint32_t
+       Value = 0,0
+       Compare = 
+
+   # End TC Stub Input Params
+
+
+   # Begin TC Stub Return Value
+
+       Name =%
+       Type = uint8_t
+       Value = 255,0
+
+   # End TC Stub Return Value
+
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ProgramByte
+       Hit Order = 2
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+ uint8_t 
+
+   # End Overloading
+
+   # Begin TC Stub TC Hit Count
+
+       Setting = 3
+       Specified = 1
+
+   # End TC Stub TC Hit Count
+
+   # Begin TC Stub Input Params
+
+       Name = Address
+       Type = uint32_t
+       Value = 0
+       Compare = 
+
+   # End TC Stub Input Params
+
+
+   # Begin TC Stub Input Params
+
+       Name = Data
+       Type = uint8_t
+       Value = 0
+       Compare = 
+
+   # End TC Stub Input Params
+
+
+   # End TC Stub
+
+# End Test Case
+
+# Begin Test Case
+
+   File = HAL_NVM.c
+   Procedure = HAL_NVM_Run
+   Procedure Number = 1
+   Creation Date =  23 Apr 2020 16:23:16 
+   Description = 001_tc_0011
+
+   # Begin Text
+       HAL_NVM_eSequencerStatus  = = HAL_NVM_STATUS_WRITE_REQUESTED  and HAL_NVM_bWriteStarted == FALSE_T  and HAL_NVM_u08StepIndex == 34
+   # End Text
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = G
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = G
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = G
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 34
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[0]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[1]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[2]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[3]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[4]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[5]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[6]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[7]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[8]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[9]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[10]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[11]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[12]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[13]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[14]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[15]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[16]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[17]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[18]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[19]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[20]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[21]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[22]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[23]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[24]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[25]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[26]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[27]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[28]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[29]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[30]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[31]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = H
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = H
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = H
+       Value = 34
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = H
+       Value = 0
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = %
+
+       Decl_type = BOOL
+
+       Usage = O
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin TC Stub
+
+       Procedure = HAL_NVM__EEPROMWriteIsFinished
+       Overloading = Prototype
+
+   # Begin Overloading
+
+
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ReadByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ProgramByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+ uint8_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+# End Test Case
+
+# Begin Test Case
+
+   File = HAL_NVM.c
+   Procedure = HAL_NVM_Run
+   Procedure Number = 1
+   Creation Date =  23 Apr 2020 16:23:16 
+   Description = 001_tc_0012
+
+   # Begin Text
+       HAL_NVM_eSequencerStatus  = = HAL_NVM_STATUS_WRITE_REQUESTED  and HAL_NVM_bWriteStarted == FALSE_T  and HAL_NVM_u08StepIndex == 20 and all entry of
+HAL_NVM_u08WriteBuffer is  set to 0xFF  and FLASH_ReadByte() return 0
+   # End Text
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = G
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = G
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = G
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 15
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[0]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[1]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[2]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[3]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[4]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[5]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[6]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[7]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[8]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[9]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[10]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[11]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[12]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[13]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[14]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[15]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[16]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[17]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[18]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[19]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[20]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[21]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[22]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[23]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[24]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[25]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[26]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[27]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[28]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[29]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[30]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[31]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0xFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = H
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = H
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = H
+       Value = 15
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = H
+       Value = 1
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = %
+
+       Decl_type = BOOL
+
+       Usage = O
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin TC Stub
+
+       Procedure = HAL_NVM__EEPROMWriteIsFinished
+       Overloading = Prototype
+
+   # Begin Overloading
+
+
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ReadByte
+       Hit Order = 1,3
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+
+   # End Overloading
+
+   # Begin TC Stub TC Hit Count
+
+       Setting = 3
+       Specified = 2
+
+   # End TC Stub TC Hit Count
+
+   # Begin TC Stub Input Params
+
+       Name = Address
+       Type = uint32_t
+       Value = 0,0
+       Compare = 
+
+   # End TC Stub Input Params
+
+
+   # Begin TC Stub Return Value
+
+       Name =%
+       Type = uint8_t
+       Value = 0,0
+
+   # End TC Stub Return Value
+
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ProgramByte
+       Hit Order = 2
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+ uint8_t 
+
+   # End Overloading
+
+   # Begin TC Stub TC Hit Count
+
+       Setting = 3
+       Specified = 1
+
+   # End TC Stub TC Hit Count
+
+   # Begin TC Stub Input Params
+
+       Name = Address
+       Type = uint32_t
+       Value = 0
+       Compare = 
+
+   # End TC Stub Input Params
+
+
+   # Begin TC Stub Input Params
+
+       Name = Data
+       Type = uint8_t
+       Value = 255
+       Compare = 
+
+   # End TC Stub Input Params
+
+
+   # End TC Stub
+
+# End Test Case
+
+# Begin Test Case
+
+   File = HAL_NVM.c
+   Procedure = HAL_NVM_Run
+   Procedure Number = 1
+   Creation Date =  23 Apr 2020 16:23:16 
+   Description = 001_tc_0013
+
+   # Begin Text
+       HAL_NVM_eSequencerStatus  = = HAL_NVM_STATUS_WRITE_REQUESTED  and HAL_NVM_bWriteStarted == FALSE_T  and HAL_NVM_u08StepIndex == 15 and FLASH_ReadByte() return 0 and HAL_NVM_u32WriteAddress == 0xFFFFFFFF
+   # End Text
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = G
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = G
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = G
+       Value = 0xFFFFFFFF
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 15
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[0]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[1]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[2]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[3]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[4]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[5]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[6]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[7]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[8]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[9]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[10]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[11]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[12]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[13]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[14]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[15]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[16]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[17]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[18]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[19]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[20]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[21]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[22]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[23]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[24]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[25]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[26]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[27]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[28]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[29]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[30]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[31]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = H
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = H
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = H
+       Value = 33
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = H
+       Value = 17
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = %
+
+       Decl_type = BOOL
+
+       Usage = O
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin TC Stub
+
+       Procedure = HAL_NVM__EEPROMWriteIsFinished
+       Overloading = Prototype
+
+   # Begin Overloading
+
+
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ReadByte
+       Hit Order = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+
+   # End Overloading
+
+   # Begin TC Stub TC Hit Count
+
+       Setting = 3
+       Specified = 18
+
+   # End TC Stub TC Hit Count
+
+   # Begin TC Stub Input Params
+
+       Name = Address
+       Type = uint32_t
+       Value = 4294967295,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16
+       Compare = 
+
+   # End TC Stub Input Params
+
+
+   # Begin TC Stub Return Value
+
+       Name =%
+       Type = uint8_t
+       Value = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+   # End TC Stub Return Value
+
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ProgramByte
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+ uint8_t 
+
+   # End Overloading
+
+   # End TC Stub
+
+# End Test Case
+
+# Begin Test Case
+
+   File = HAL_NVM.c
+   Procedure = HAL_NVM_Run
+   Procedure Number = 1
+   Creation Date =  23 Apr 2020 16:23:16 
+   Description = 001_tc_014
+
+   # Begin Text
+       HAL_NVM_eSequencerStatus  = = HAL_NVM_STATUS_WRITE_REQUESTED  and HAL_NVM_bWriteStarted == FALSE_T  and HAL_NVM_u08StepIndex == 15 and FLASH_ReadByte() return 0 and HAL_NVM_u08WriteBuffer[26] == 0x23
+   # End Text
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = G
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = G
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = G
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 15
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[0]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[1]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[2]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[3]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[4]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[5]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[6]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[7]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[8]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[9]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[10]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[11]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[12]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[13]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[14]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[15]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[16]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[17]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[18]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[19]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[20]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[21]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[22]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[23]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[24]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[25]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[26]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x23
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[27]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[28]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[29]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[30]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[31]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = H
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = H
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = H
+       Value = 27
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = H
+       Value = 13
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = %
+
+       Decl_type = BOOL
+
+       Usage = O
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin TC Stub
+
+       Procedure = HAL_NVM__EEPROMWriteIsFinished
+       Overloading = Prototype
+
+   # Begin Overloading
+
+
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ReadByte
+       Hit Order = 1,2,3,4,5,6,7,8,9,10,11,12,13,15
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+
+   # End Overloading
+
+   # Begin TC Stub TC Hit Count
+
+       Setting = 3
+       Specified = 14
+
+   # End TC Stub TC Hit Count
+
+   # Begin TC Stub Input Params
+
+       Name = Address
+       Type = uint32_t
+       Value = 0,1,2,3,4,5,6,7,8,9,10,11,12,12
+       Compare = 
+
+   # End TC Stub Input Params
+
+
+   # Begin TC Stub Return Value
+
+       Name =%
+       Type = uint8_t
+       Value = 0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+   # End TC Stub Return Value
+
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ProgramByte
+       Hit Order = 14
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+ uint8_t 
+
+   # End Overloading
+
+   # Begin TC Stub TC Hit Count
+
+       Setting = 3
+       Specified = 1
+
+   # End TC Stub TC Hit Count
+
+   # Begin TC Stub Input Params
+
+       Name = Address
+       Type = uint32_t
+       Value = 12
+       Compare = 
+
+   # End TC Stub Input Params
+
+
+   # Begin TC Stub Input Params
+
+       Name = Data
+       Type = uint8_t
+       Value = 0x23
+       Compare = 
+
+   # End TC Stub Input Params
+
+
+   # End TC Stub
+
+# End Test Case
+
+# Begin Test Case
+
+   File = HAL_NVM.c
+   Procedure = HAL_NVM_Run
+   Procedure Number = 1
+   Creation Date =  23 Apr 2020 16:23:16 
+   Description = 001_tc_015
+
+   # Begin Text
+       HAL_NVM_eSequencerStatus  = = HAL_NVM_STATUS_WRITE_REQUESTED  and HAL_NVM_bWriteStarted == FALSE_T  and HAL_NVM_u08StepIndex == 15 and FLASH_ReadByte() return 0  13 times and 0x255 last iteration and HAL_NVM_u08WriteBuffer[26] == 0x23
+   # End Text
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = G
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = G
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = G
+       Value = ZERO
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 15
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[0]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[1]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[2]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[3]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[4]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[5]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[6]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[7]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[8]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[9]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[10]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[11]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[12]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[13]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[14]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[15]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[16]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[17]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[18]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[19]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[20]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[21]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[22]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[23]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[24]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[25]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[26]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x23
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[27]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[28]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[29]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[30]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08WriteBuffer[31]
+
+       Decl_type = U08
+
+       Usage = G
+       Value = 0x00
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_eSequencerStatus
+
+       Decl_type = HAL_NVM_Seq_Status_e
+
+       Usage = H
+       Value = HAL_NVM_STATUS_WRITE_REQUESTED
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_bWriteStarted
+
+       Decl_type = BOOL
+
+       Usage = H
+       Value = TRUE_T
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u08StepIndex
+
+       Decl_type = U08
+
+       Usage = H
+       Value = 27
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = HAL_NVM_u32WriteAddress
+
+       Decl_type = U32
+
+       Usage = H
+       Value = 13
+
+   # End Variable
+
+   # Begin Variable
+
+       Name = %
+
+       Decl_type = BOOL
+
+       Usage = O
+       Value = FALSE_T
+
+   # End Variable
+
+   # Begin TC Stub
+
+       Procedure = HAL_NVM__EEPROMWriteIsFinished
+       Overloading = Prototype
+
+   # Begin Overloading
+
+
+
+   # End Overloading
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ReadByte
+       Hit Order = 1,2,3,4,5,6,7,8,9,10,11,12,13,15
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+
+   # End Overloading
+
+   # Begin TC Stub TC Hit Count
+
+       Setting = 3
+       Specified = 14
+
+   # End TC Stub TC Hit Count
+
+   # Begin TC Stub Input Params
+
+       Name = Address
+       Type = uint32_t
+       Value = 0,1,2,3,4,5,6,7,8,9,10,11,12,12
+       Compare = 
+
+   # End TC Stub Input Params
+
+
+   # Begin TC Stub Return Value
+
+       Name =%
+       Type = uint8_t
+       Value = 0,0,0,0,0,0,0,0,0,0,0,0,0,255
+
+   # End TC Stub Return Value
+
+
+   # End TC Stub
+
+   # Begin TC Stub
+
+       Procedure = FLASH_ProgramByte
+       Hit Order = 14
+       Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+ uint8_t 
+
+   # End Overloading
+
+   # Begin TC Stub TC Hit Count
+
+       Setting = 3
+       Specified = 1
+
+   # End TC Stub TC Hit Count
+
+   # Begin TC Stub Input Params
+
+       Name = Address
+       Type = uint32_t
+       Value = 12
+       Compare = 
+
+   # End TC Stub Input Params
+
+
+   # Begin TC Stub Input Params
+
+       Name = Data
+       Type = uint8_t
+       Value = 0x23
+       Compare = 
+
+   # End TC Stub Input Params
+
+
+   # End TC Stub
+
+# End Test Case
+
+# Begin Stub
+
+   Procedure = HAL_NVM__EEPROMWriteIsFinished
+   Method = Managed
+   Overloading = Prototype
+
+   # Begin Overloading
+
+
+
+   # End Overloading
+
+# End Stub
+
+# Begin Stub
+
+   Procedure = FLASH_ReadByte
+   Method = Managed
+   Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t
+
+   # End Overloading
+
+# End Stub
+
+# Begin Stub
+
+   Procedure = FLASH_ProgramByte
+   Method = Managed
+   Overloading = Prototype
+
+   # Begin Overloading
+
+uint32_t 
+ uint8_t 
+
+   # End Overloading
+
+# End Stub
+
+# Begin White Files
+HAL_NVM.c
+D:\Travail\_SVN\Clients\Akwel\TU_202002\Batch2\Envoi_Campagne_TU_ACTIA\Unit_tests\AKWEL_Batch2\Src\0004_HAL_NVM\_Target_Project\main.c
+# End White Files
+
+# Begin Isolated Procedure
+   File = HAL_NVM.c
+   Procedure = HAL_NVM_Run
+   Procedure Number = 1
+# End Isolated Procedure
