@@ -13,7 +13,6 @@ pattern_Tc_Stub="(# Begin TC Stub)([\s\S]*?)(# End TC Stub)"
 
 
 
-
 class Variable:
     pattern_NAME_variable_in_attribute = "(Name =)([\s\S]*?)(\n)"
     pattern_TYPE_variable_in_attribute = "(Decl_type =)([\s\S]*?)(\n)"
@@ -39,9 +38,7 @@ class Variable:
         return input_variable
 
 
-
 class TC_Hit_Count:
-
 
     pattern_Hit_Count_Setting = "(Setting =)([\s\S]*?)(\n)"
     pattern_Hit_Count_specified = "(specified =)([\s\S]*?)(\n)"
@@ -92,11 +89,13 @@ class Return_Value:
     pattern_Return_Value_Name = "(Name =)([\s\S]*?)(\n)"
     pattern_TC_Input_Parameters_Type = "(Type =)([\s\S]*?)(\n)"
     pattern_TC_Input_Parameters_value = "(value =)([\s\S]*?)(\n)"
+    TC_Input_Parameters.pattern_TC_Input_Parameters_compare = "(compare =)([\s\S]*?)(\n)"
 
     def __init__(self):
         self.Name=''
         self.Type=''
         self.Value=''
+        self.compare=''
 
     def extract_TC_Input_Return_Value_attributes(self, chaine):
         Name = re.findall(Return_Value.pattern_Return_Value_Name, str(chaine))
@@ -110,33 +109,14 @@ class Return_Value:
 
         return new
 
-
-class TC_Stub:
-
-    pattern_Procedure_tcstub = "(Procedure =)([\s\S]*?)(\n)"
-    pattern_Procedure_tcstub = "(Hit Order =)([\s\S]*?)(\n)"
-    pattern_Overloading_tcstub = "(# Begin Overloading)([\s\S]*?)( # End Overloading)"
-
-
-    def __init__(self):
-        self.Procedure=''
-        self.Hit_order=''
-        self.Overloading=''
-        self.overload=''
-        self.Hit_count:List[TC_Hit_Count]
-        self.Input:List[TC_Input_Parameters]
-        self.Return_Value:List[Return_Value]
-
-
-
-
 class TestCase:
     pattern_DESCRIPTION_in_test_case = "(Description = )([\s\S]*?)(\n)"
 
     def __init__(self, doc):
         self.input_variables: List[Variable] = []
         self.output_variables: List[Variable] = []
-        self.TCstub: List[TC_Stub]
+        self.tc_stub:List[TC_Stub]= []
+
         self.Name = ''
         self.Documentation = ''
         self.doc = doc
@@ -146,8 +126,11 @@ class TestCase:
     def extract_test_case(self, chaine):
 
         result = re.findall(pattern_test_case, chaine)
+
+
         for i, test_case in enumerate(result):
             new_test_case = TestCase(self.doc)
+
             test_case_result = test_case[1]
             temp = re.search(TestCase.pattern_DESCRIPTION_in_test_case, test_case_result).group(2)
             new_test_case.Name = temp.strip()
@@ -155,7 +138,6 @@ class TestCase:
             temp2 = re.search(pattern_text, test_case_result).group(2)
             new_test_case.Documentation = temp2.strip()
             result2 = re.findall(pattern_variable_in_test_case, test_case_result)
-
 
             for j, input_variable in enumerate(result2):
                 new_variable = Variable().extract_variable_attributes(input_variable[1])
@@ -167,6 +149,72 @@ class TestCase:
 
 
             self.doc.test_cases.append(new_test_case)
+
+
+class TC_Stub:
+
+    def __init__(self,doc):
+        self.num=0
+        self.Procedure=''
+        self.Hit_order=''
+        self.Overloading=''
+        self.overload=''
+        self.Hit_count:List[TC_Hit_Count]
+        self.Input:List[TC_Input_Parameters]
+        self.Return_Value:List[Return_Value]
+        self.doc=doc
+
+
+    def extract_TC_Stub(self,chaine):
+        result = re.findall(pattern_test_case,chaine)
+        i=0
+        for i, test_case in enumerate(result):
+
+            i=i+1
+
+            test_case_result = test_case[1]
+
+
+            result2=re.findall(pattern_Tc_Stub,test_case_result)
+
+            print(result2)
+
+
+            for j,stubs in enumerate(result2):
+
+                new_stub = TC_Stub(self.doc)
+
+                new_stub.num=i
+
+
+                pattern_TC_Hit_in_Stubs = "(# Begin TC Stub TC Hit Count)([\s\S]*?)(# End TC Stub TC Hit Count)"
+                result=re.findall(pattern_TC_Hit_in_Stubs,stubs[1])
+
+
+                if (len(result)!=0):
+                  new_TC_Hit_Count = TC_Hit_Count.extract_TC_Hit_Count_attributes(result[1])
+                  new_stub.Hit_count.append(new_TC_Hit_Count)
+
+
+                pattern_Tc_input_in_stubs = "(# Begin TC Stub Input Params)([\s\S]*?)( # End TC Stub Input Params)"
+                result = re.findall(pattern_Tc_input_in_stubs, stubs[1])
+
+
+                if (len(result)!=0):
+                    new_TC_Input_Parameters = TC_Input_Parameters.extract_Input_Parameters(result[1])
+                    new_stub.Input.append(new_TC_Input_Parameters)
+
+                pattern_Tc_Return_Value= "(# Begin TC Stub Input Params)([\s\S]*?)( # End TC Stub Input Params)"
+                result = re.findall(pattern_Tc_Return_Value, stubs[1])
+                print(result)
+
+                if (len(result)!=0):
+                 new_Return_Value=Return_Value.extract_TC_Input_Return_Value_attributes(result[1])
+                 new_stub.Return_Value.append(new_Return_Value)
+                 print(result)
+
+
+                self.doc.stubs.append(new_stub)
 
 
 class DOC:
@@ -181,7 +229,9 @@ class DOC:
     pattern_COVERAGE_MODE_in_attribute = "(IBox = )([\s\S]*?)(\n)"
 
     test_cases: List[TestCase] = []
-    TC_Stubs:List[TC_Stub]= []
+    stubs:List[TC_Stub] = []
+
+
 
     def __init__(self):
         self.procedure = ''
@@ -293,12 +343,27 @@ class DOC:
                 print('Usage :   ', variable.Usage)
                 print('Value :   ', variable.Value)
                 print('Value Retained ? :   ')
+        for i, stub in enumerate(self.stubs):
+            print('----****** Stubs ' + str(idx + 1) + ' ******----')
+            print('\n')
 
-ctf_file = open("test.tcf", "r")
+            for idx2,stub in enumerate(stub.Hit_count):
+                print(('\n'))
+                print('TC_Hit_Count :**************************************'   )
+                print(stub.Setting)
+                print(stub.specified)
+                print(stub.specified)
 
 doc = DOC()
+
+ctf_file = open("test.tcf", "r")
 doc.extract_doc_atrributes(ctf_file.read())
 ctf_file = open("test.tcf", "r")
 
 #TestCase(doc).extract_test_case(ctf_file.read())
+
 doc.print_information()
+
+TC_Stub(doc).extract_TC_Stub(ctf_file.read())
+
+
