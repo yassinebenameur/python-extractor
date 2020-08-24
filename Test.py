@@ -9,8 +9,8 @@ pattern_text = "(# Begin Text)([\s\S]*?)(# End Text)"
 pattern_white_files = "(# Begin White Files)([\s\S]*?)(# End White Files)"
 pattern_isolated_procedure = "(# Begin Isolated Procedure)([\s\S]*?)(# End Isolated Procedure)"
 pattern_properties = "(# Begin Properties)([\s\S]*?)(# End Properties)"
-pattern_Tc_Stub="(# Begin TC Stub)([\s\S]*?)(# End TC Stub)"
-
+pattern_Tc_Stub = "(# Begin TC Stub\n)([\s\S]*?)(# End TC Stub\n)"
+pattern_stubs = "(# Begin Stub)([\s\S]*?)(# End Stub)"
 
 
 class Variable:
@@ -38,76 +38,73 @@ class Variable:
         return input_variable
 
 
-class TC_Hit_Count:
-
-    pattern_Hit_Count_Setting = "(Setting =)([\s\S]*?)(\n)"
-    pattern_Hit_Count_specified = "(specified =)([\s\S]*?)(\n)"
+class TC_Hit:
+    pattern_Hit_Count_Setting = "(    Setting =)([\s\S]*?)(\n)"
+    pattern_Hit_Count_specified = "(    Specified =)([\s\S]*?)(\n)"
 
     def __init__(self):
-        self.Setting=''
-        self.specefied=''
+        self.Setting = ''
+        self.specefied = ''
 
     def extract_TC_Hit_Count_attributes(self, chaine):
-        Setting=re.findall(TC_Hit_Count.pattern_Hit_Count_Setting,str(chaine))
-        specified=re.findall(TC_Hit_Count.pattern_Hit_Count_specified,str(chaine))
-        new=TC_Hit_Count()
-        new.Setting=Setting[0][1].strip
-        new.specefied=specified[0][1].strip
+
+        Setting = re.findall(TC_Hit.pattern_Hit_Count_Setting, str(chaine))
+        specified = re.findall(TC_Hit.pattern_Hit_Count_specified, str(chaine))
+        new = TC_Hit()
+        new.Setting = Setting[0][1].strip()
+        new.specefied = specified[0][1].strip()
 
         return new
 
 
 class TC_Input_Parameters:
-
-    pattern_TC_Input_Parameters_Name="(Name =)([\s\S]*?)(\n)"
-    pattern_TC_Input_Parameters_Type= "(Type =)([\s\S]*?)(\n)"
-    pattern_TC_Input_Parameters_value = "(value =)([\s\S]*?)(\n)"
-    pattern_TC_Input_Parameters_compare = "(compare =)([\s\S]*?)(\n)"
+    pattern_TC_Input_Parameters_Name = "(    Name =)([\s\S]*?)(\n)"
+    pattern_TC_Input_Parameters_Type = "(    Type =)([\s\S]*?)(\n)"
+    pattern_TC_Input_Parameters_value = "(    Value =)([\s\S]*?)(\n)"
+    pattern_TC_Input_Parameters_compare = "(    Compare =)([\s\S]*?)(\n)"
 
     def __init__(self):
-        self.Name=''
-        self.Type=''
-        self.value=''
-        self.compare=''
+        self.Name = ''
+        self.Type = ''
+        self.value = ''
+        self.compare = ''
 
-
-    def extract_Input_Parameters(self,chaine):
+    def extract_Input_Parameters(self, chaine):
         Name = re.findall(TC_Input_Parameters.pattern_TC_Input_Parameters_Name, str(chaine))
         type = re.findall(TC_Input_Parameters.pattern_TC_Input_Parameters_Type, str(chaine))
         Value = re.findall(TC_Input_Parameters.pattern_TC_Input_Parameters_value, str(chaine))
         compare = re.findall(TC_Input_Parameters.pattern_TC_Input_Parameters_compare, str(chaine))
         new = TC_Input_Parameters()
-        new.Name = Name[0][1].strip
-        new.Type = type[0][1].strip
-        new.value = Value[0][1].strip
-        new.compare = compare[0][1].strip
-        new.Name = Name[0][1].strip
+        new.Name = Name[0][1].strip()
+        new.Type = type[0][1].strip()
+        new.value = Value[0][1].strip()
+        new.compare = compare[0][1].strip()
+        new.Name = Name[0][1].strip()
 
 
-class Return_Value:
-
-    pattern_Return_Value_Name = "(Name =)([\s\S]*?)(\n)"
-    pattern_TC_Input_Parameters_Type = "(Type =)([\s\S]*?)(\n)"
-    pattern_TC_Input_Parameters_value = "(value =)([\s\S]*?)(\n)"
-    TC_Input_Parameters.pattern_TC_Input_Parameters_compare = "(compare =)([\s\S]*?)(\n)"
+class TC_Return_Value:
+    pattern_Return_Value_Name = "(    Name =)([\s\S]*?)(\n)"
+    pattern_TC_Input_Parameters_Type = "(    Type =)([\s\S]*?)(\n)"
+    pattern_TC_Input_Parameters_value = "(    Value =)([\s\S]*?)(\n)"
 
     def __init__(self):
-        self.Name=''
-        self.Type=''
-        self.Value=''
-        self.compare=''
+        self.Name = ''
+        self.Type = ''
+        self.Value = ''
+        self.compare = ''
 
     def extract_TC_Input_Return_Value_attributes(self, chaine):
-        Name = re.findall(Return_Value.pattern_Return_Value_Name, str(chaine))
-        type = re.findall(Return_Value.pattern_TC_Input_Parameters_Type, str(chaine))
-        Value = re.findall(Return_Value.pattern_TC_Input_Parameters_value, str(chaine))
+        Name = re.findall(TC_Return_Value.pattern_Return_Value_Name, str(chaine))
+        type = re.findall(TC_Return_Value.pattern_TC_Input_Parameters_Type, str(chaine))
+        Value = re.findall(TC_Return_Value.pattern_TC_Input_Parameters_value, str(chaine))
         compare = re.findall(TC_Input_Parameters.pattern_TC_Input_Parameters_compare, str(chaine))
-        new = Return_Value()
-        new.Name = Name[0][1].strip
-        new.Type = type[0][1].strip
-        new.value = Value[0][1].strip
+        new = TC_Return_Value()
+        new.Name = Name[0][1].strip()
+        new.Type = type[0][1].strip()
+        new.value = Value[0][1].strip()
 
         return new
+
 
 class TestCase:
     pattern_DESCRIPTION_in_test_case = "(Description = )([\s\S]*?)(\n)"
@@ -115,18 +112,14 @@ class TestCase:
     def __init__(self, doc):
         self.input_variables: List[Variable] = []
         self.output_variables: List[Variable] = []
-        self.tc_stub:List[TC_Stub]= []
 
         self.Name = ''
         self.Documentation = ''
         self.doc = doc
 
-
-
     def extract_test_case(self, chaine):
 
         result = re.findall(pattern_test_case, chaine)
-
 
         for i, test_case in enumerate(result):
             new_test_case = TestCase(self.doc)
@@ -142,79 +135,126 @@ class TestCase:
             for j, input_variable in enumerate(result2):
                 new_variable = Variable().extract_variable_attributes(input_variable[1])
 
-                if (new_variable.Usage =='G'):
-                    new_test_case.input_variables.append(new_variable)
-                else:
-                    new_test_case.output_variables.append(new_variable)
+                if (new_variable.Usage == 'G'):
 
+                    new_test_case.input_variables.append(new_variable)
+
+                elif ((new_variable.Usage == 'H') or (new_variable.Usage == 'O')):
+
+                    new_test_case.output_variables.append(new_variable)
 
             self.doc.test_cases.append(new_test_case)
 
 
 class TC_Stub:
 
-    def __init__(self,doc):
-        self.num=0
-        self.Procedure=''
-        self.Hit_order=''
-        self.Overloading=''
-        self.overload=''
-        self.Hit_count:List[TC_Hit_Count]
-        self.Input:List[TC_Input_Parameters]
-        self.Return_Value:List[Return_Value]
-        self.doc=doc
 
+    Pattern_Procedure_in_TC_Stub = "(    Procedure =)([\s\S]*?)('\n')"
+    Pattern_Hit_order_in_TC_Stub = "(Hit Order =)([\s\S]*?)('\n')"
 
-    def extract_TC_Stub(self,chaine):
-        result = re.findall(pattern_test_case,chaine)
-        i=0
+    def __init__(self, doc):
+        self.num = 0
+        self.Procedure = ''
+        self.Hit_order = ''
+        self.Overloading = ''
+        self.overload = ''
+        self.TC_Hit_count:List[TC_Hit] = []
+        self.Input_Parameters:List[TC_Input_Parameters] = []
+        self.Return_Value:List[TC_Return_Value] = []
+        self.doc = doc
+
+    def extract_TC_Stub(self, chaine):
+
+        pattern="([\s\S]*?)(# Begin Overloading)"
+        result = re.findall(pattern_test_case, chaine)
+
         for i, test_case in enumerate(result):
-
-            i=i+1
 
             test_case_result = test_case[1]
 
+            result2 = re.findall(pattern_Tc_Stub,test_case_result)
 
-            result2=re.findall(pattern_Tc_Stub,test_case_result)
-
-            print(result2)
-
-
-            for j,stubs in enumerate(result2):
+            for j, stub in enumerate(result2):
 
                 new_stub = TC_Stub(self.doc)
+                new_stub.num=j+1
 
-                new_stub.num=i
+                stub_final = stub[1]
+
+
+
+             #   temp1=re.findall(pattern,stub_final)
+
+             #   temp=re.search(TC_Stub.Pattern_Procedure_in_TC_Stub,temp1[0][0])
+             #   print(temp)
+
+               # temp =re.findall(TC_Stub.Pattern_Hit_order_in_TC_Stub,stub_final)
+               # print(type(temp))
+               # print(temp)
 
 
                 pattern_TC_Hit_in_Stubs = "(# Begin TC Stub TC Hit Count)([\s\S]*?)(# End TC Stub TC Hit Count)"
-                result=re.findall(pattern_TC_Hit_in_Stubs,stubs[1])
+
+                result1 = re.findall(pattern_TC_Hit_in_Stubs, stub_final)
 
 
-                if (len(result)!=0):
-                  new_TC_Hit_Count = TC_Hit_Count.extract_TC_Hit_Count_attributes(result[1])
-                  new_stub.Hit_count.append(new_TC_Hit_Count)
+                if (result1):
+
+                    new_TC_Hit_Count = TC_Hit().extract_TC_Hit_Count_attributes(result1[0][1])
+                    new_stub.TC_Hit.append(new_TC_Hit_Count)
 
 
                 pattern_Tc_input_in_stubs = "(# Begin TC Stub Input Params)([\s\S]*?)( # End TC Stub Input Params)"
-                result = re.findall(pattern_Tc_input_in_stubs, stubs[1])
+                result2 = re.findall(pattern_Tc_input_in_stubs, stub_final)
 
+                if (result2):
+                    new_TC_Input_Parameters =TC_Input_Parameters().extract_Input_Parameters(result2[0][1])
+                    new_stub.Input_Parameters.append(new_TC_Input_Parameters)
 
-                if (len(result)!=0):
-                    new_TC_Input_Parameters = TC_Input_Parameters.extract_Input_Parameters(result[1])
-                    new_stub.Input.append(new_TC_Input_Parameters)
+                pattern_Tc_Return_Value = "(# Begin TC Stub Input Params)([\s\S]*?)( # End TC Stub Input Params)"
+                result3 = re.findall(pattern_Tc_Return_Value, stub_final)
 
-                pattern_Tc_Return_Value= "(# Begin TC Stub Input Params)([\s\S]*?)( # End TC Stub Input Params)"
-                result = re.findall(pattern_Tc_Return_Value, stubs[1])
-                print(result)
-
-                if (len(result)!=0):
-                 new_Return_Value=Return_Value.extract_TC_Input_Return_Value_attributes(result[1])
-                 new_stub.Return_Value.append(new_Return_Value)
-                 print(result)
-
+                if (result3):
+                    new_Return_Value = TC_Return_Value().extract_TC_Input_Return_Value_attributes(result3[0][1])
+                    new_stub.Return_Value.append(new_Return_Value)
 
                 self.doc.stubs.append(new_stub)
+
+
+class stub:
+    pattern_Procedure = "(Procedure =)([\s\S]*?)(\n)"
+    pattern_methode = "(Method =)([\s\S]*?)(\n)"
+    pattern_overload = "(# Begin Overloading)([\s\S]*?)(# End Overloading)"
+
+    def __init__(self, chaine):
+        self.Procedure = ''
+        self.Method = ''
+        self.overloading = ''
+        self.doc = doc
+
+    def extract_stubs(self, chaine):
+        result = re.findall(pattern_stubs, chaine)
+
+        for i, stub_n in enumerate(result):
+            new_stub = stub(self.doc)
+
+            new_stub_result = stub_n[1]
+
+            temp =re.search(stub.pattern_Procedure, new_stub_result).group(2)
+            new_stub.Procedure = temp.strip()
+
+            print(new_stub.Procedure)
+
+
+            temp2 = re.search(stub.pattern_methode, new_stub_result).group(2)
+            new_stub.Method = temp2.strip()
+
+            x = re.findall(stub.pattern_overload, new_stub_result)
+
+            for i, overload in enumerate(x):
+                new_stub.overloading = overload[1].strip()
+
+            self.doc.stub_file.append(new_stub)
 
 
 class DOC:
@@ -229,9 +269,8 @@ class DOC:
     pattern_COVERAGE_MODE_in_attribute = "(IBox = )([\s\S]*?)(\n)"
 
     test_cases: List[TestCase] = []
-    stubs:List[TC_Stub] = []
-
-
+    stubs: List[TC_Stub] = []
+    stub_file: List[stub] = []
 
     def __init__(self):
         self.procedure = ''
@@ -252,12 +291,10 @@ class DOC:
 
         attributesString = attributes[0][1]
 
-
         result2 = re.findall(DOC.pattern_SEQUENCE_NAME_in_attribute, attributesString)
-        print("************************************************************************")
-        print(result2)
+
         result3 = result2[0][1]
-        print(result3)
+
         self.sequenceName = result3.strip()
 
         result2 = re.findall(DOC.pattern_VERSION_in_attribute, attributesString)
@@ -273,9 +310,9 @@ class DOC:
         self.testerName = temp4[0][1].strip()
 
         temp = re.search(pattern_test_case, chaine)
-        print(temp[0])
+
         temp1 = temp[0]
-        print(temp1)
+
         temp2 = re.search(DOC.pattern_CREATION_DATE_in_attribute, temp1).group(2)
 
         self.creationDate = temp2.strip()
@@ -343,27 +380,26 @@ class DOC:
                 print('Usage :   ', variable.Usage)
                 print('Value :   ', variable.Value)
                 print('Value Retained ? :   ')
-        for i, stub in enumerate(self.stubs):
+        for i, stub in enumerate(self.stub_file):
             print('----****** Stubs ' + str(idx + 1) + ' ******----')
             print('\n')
 
-            for idx2,stub in enumerate(stub.Hit_count):
-                print(('\n'))
-                print('TC_Hit_Count :**************************************'   )
-                print(stub.Setting)
-                print(stub.specified)
-                print(stub.specified)
+
+
 
 doc = DOC()
 
-ctf_file = open("test.tcf", "r")
-doc.extract_doc_atrributes(ctf_file.read())
-ctf_file = open("test.tcf", "r")
+# doc.extract_doc_atrributes(ctf_file.read())
+
 
 #TestCase(doc).extract_test_case(ctf_file.read())
 
-doc.print_information()
+# doc.print_information()
+ctf_file = open("test.tcf", "r")
 
 TC_Stub(doc).extract_TC_Stub(ctf_file.read())
 
+ctf_file = open("test.tcf", "r")
 
+
+#stub(doc).extract_stubs(ctf_file.read())
