@@ -1,6 +1,8 @@
 from openpyxl import Workbook
 
-from main import DOC, TestCase
+from Test import DOC, TestCase
+
+from Test import TC_Stub
 
 wb = Workbook()
 
@@ -55,9 +57,24 @@ ws['C15'] = doc.additionalFiles
 
 ws['B55'] = 'Test Case Data Sets'
 
+ws['B17'] = 'Test Sequence Code Inserts'
 
-print(len(doc.test_cases[0].input_variables))
+ws['B22'] = 'Pre Include Code'
+
+ws['B25'] = 'Post Include Code'
+
+
+ws['B31'] = 'File Based Test Case Cleanup Code'
+
+ws['B34'] = 'Globals Environment'
+
+ws['B34'] = 'Stubs Environment'
+
+
+
 current = 56
+
+
 for idx, variable in enumerate(doc.test_cases[0].input_variables):
     row = 56 + idx * 6
     pos = 'B' + str(row)
@@ -103,24 +120,137 @@ for idx, variable in enumerate(doc.test_cases[0].output_variables):
     pos = 'C' + str(row + 6)
     ws[str(pos)] = 'TBrun Analysis'
 
-col = 'D'
-# for test_case in doc.test_cases:
-#     row = 57
-#
-#     for input_variable in test_case.input_variables:
-#         ws[col + str(row)] = input_variable.Name
-#         ws[col + str(row + 1)] = input_variable.Type
-#         ws[col + str(row + 2)] = input_variable.Usage
-#         ws[col + str(row + 3)] = input_variable.Value
-#         row = row + 6
-#     row = current+1
-#     for output_variable in test_case.output_variables:
-#         ws[col + str(row)] = output_variable.Name
-#         ws[col + str(row+1)] = output_variable.Type
-#         ws[col + str(row+2)] = output_variable.Usage
-#         ws[col + str(row+3)] = output_variable.Value
-#         row = row + 7
-#
-#     col = chr(ord(col) + 1)
+nbr= len(doc.stubs) // len(doc.test_cases)
+
+print(nbr)
+
+C='B'
+l=309
+for idx in range(nbr):
+    ws['B'+str(l)] = 'Test Case Stub '+str(idx+1)
+    ws['C'+str(l+1)] ='Procedure'
+    ws['C' + str(l + 2)] = 'Name'
+
+    ws['B' + str(l + 3)] = 'TC Hit Count'
+    ws['C' + str(l + 4)] = 'Value'
+    ws['B' + str(l + 5)] = 'TC Hit Order'
+    ws['C' + str(l + 6)] = 'Value'
+    ws['B'+ str(l + 7)] = 'Input Parameter 1'
+    ws['C' + str(l + 8)] = 'Name'
+    ws['C' + str(l + 9)] = 'Type'
+    ws['C' + str(l + 10)] = 'Value'
+    ws['C' + str(l + 11)] = 'Comparaison'
+    ws['B' + str(l + 12)] = 'Return Value'
+    ws['C' + str(l + 13)]= 'Name'
+    ws['C' + str(l + 14)] = 'Type'
+    ws['C' + str(l + 15)] = 'Value'
+    l=l+18
+
+l=311
+C = 'D'
+l = 308
+
+for i,stub in enumerate(doc.stubs.Tc_Hit):
+    print(stub.num)
+    ws[C + str(l)] = 'Test Case' + str(stub.num + 1)
+
+    ws[C + str(l+5)]=stub.Setting
+
+
+    l=l+18
+
+    if (j==nbr):
+        l=308
+        C=chr(ord(C)+1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+i=0
+j=38
+
+
+ws['B'+str(37)]='Stubs Environment'
+ws['C'+str(37)]='Procedure'
+ws['D'+str(37)]='Method'
+ws['E'+str(37)]='Method'
+ws['F'+str(37)]='Default Return Value'
+ws['G'+str(37)]='File'
+
+for st in doc.stub_file:
+
+    i=i+1
+    ws['C'+str(j)]=st.Procedure+'('+str(st.overloading)+')'
+    ws['D'+str(j)]=st.Method
+    ws['B'+str(j)]='Stub '+str(i)
+    j=j+1
+
+
+col = 'C'
+col2 = 'A'
+j=0
+
+for test_case in doc.test_cases:
+
+
+      row=57
+      j = j + 1
+      ws[col + str(44)]='Test Case'+str(j)
+      ws['B45'] = 'Test Case Attributes'
+      ws[col + str(46)] = test_case.Name
+      ws[col + str(47)] = test_case.Documentation
+
+      for input_variable in test_case.input_variables:
+          ws[col + str(row)] =  input_variable.Name
+          ws[col + str(row + 1)] = input_variable.Type
+          ws[col + str(row + 2)] = 'input global'
+          ws[col + str(row + 3)] = input_variable.Value
+
+
+          row = row + 6
+      row = current+1
+
+      for output_variable in test_case.output_variables:
+
+
+
+          ws[col + str(row)] = output_variable.Name
+          ws[col + str(row+1)] = output_variable.Type
+          ws[col + str(row+2)] = 'output global'
+          ws[col + str(row+3)] = output_variable.Value
+          row = row + 7
+
+      col=chr(ord(col)+1)
+
+
 
 wb.save('sample.xlsx')
