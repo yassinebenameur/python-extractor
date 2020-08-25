@@ -119,18 +119,18 @@ for idx, variable in enumerate(doc.test_cases[0].output_variables):
 
     pos = 'C' + str(row + 6)
     ws[str(pos)] = 'TBrun Analysis'
+nbr=len(doc.test_cases)
+print(nbr)
 
 nbr= len(doc.stubs) // len(doc.test_cases)
 
-print(nbr)
-
 C='B'
 l=309
+print(nbr)
 for idx in range(nbr):
     ws['B'+str(l)] = 'Test Case Stub '+str(idx+1)
     ws['C'+str(l+1)] ='Procedure'
     ws['C' + str(l + 2)] = 'Name'
-
     ws['B' + str(l + 3)] = 'TC Hit Count'
     ws['C' + str(l + 4)] = 'Value'
     ws['B' + str(l + 5)] = 'TC Hit Order'
@@ -145,55 +145,6 @@ for idx in range(nbr):
     ws['C' + str(l + 14)] = 'Type'
     ws['C' + str(l + 15)] = 'Value'
     l=l+18
-
-l=311
-C = 'D'
-l = 308
-
-for i,stub in enumerate(doc.stubs.Tc_Hit):
-    print(stub.num)
-    ws[C + str(l)] = 'Test Case' + str(stub.num + 1)
-
-    ws[C + str(l+5)]=stub.Setting
-
-
-    l=l+18
-
-    if (j==nbr):
-        l=308
-        C=chr(ord(C)+1)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 i=0
 j=38
@@ -215,9 +166,10 @@ for st in doc.stub_file:
     j=j+1
 
 
-col = 'C'
+col = 'D'
 col2 = 'A'
 j=0
+
 
 for test_case in doc.test_cases:
 
@@ -228,29 +180,31 @@ for test_case in doc.test_cases:
       ws['B45'] = 'Test Case Attributes'
       ws[col + str(46)] = test_case.Name
       ws[col + str(47)] = test_case.Documentation
-
+      j=0
+      k=0
       for input_variable in test_case.input_variables:
+          j=j+1
           ws[col + str(row)] =  input_variable.Name
           ws[col + str(row + 1)] = input_variable.Type
           ws[col + str(row + 2)] = 'input global'
           ws[col + str(row + 3)] = input_variable.Value
 
-
           row = row + 6
-      row = current+1
+
+      row = row+1
+      print(row)
 
       for output_variable in test_case.output_variables:
-
-
-
+          k=k+1
           ws[col + str(row)] = output_variable.Name
           ws[col + str(row+1)] = output_variable.Type
           ws[col + str(row+2)] = 'output global'
           ws[col + str(row+3)] = output_variable.Value
           row = row + 7
-
       col=chr(ord(col)+1)
 
+print(row)
 
 
 wb.save('sample.xlsx')
+
