@@ -61,25 +61,23 @@ class TC_Input_Parameters:
     pattern_TC_Input_Parameters_Name = "(    Name =)([\s\S]*?)(\n)"
     pattern_TC_Input_Parameters_Type = "(    Type =)([\s\S]*?)(\n)"
     pattern_TC_Input_Parameters_value = "(    Value =)([\s\S]*?)(\n)"
-    pattern_TC_Input_Parameters_compare = "(    Compare =)([\s\S]*?)(\n)"
+
 
     def __init__(self):
         self.Name = ''
         self.Type = ''
         self.value = ''
-        self.compare = ''
+
 
     def extract_Input_Parameters(self, chaine):
         Name = re.findall(TC_Input_Parameters.pattern_TC_Input_Parameters_Name, str(chaine))
-        type = re.findall(TC_Input_Parameters.pattern_TC_Input_Parameters_Type, str(chaine))
+        type2 = re.findall(TC_Input_Parameters.pattern_TC_Input_Parameters_Type, str(chaine))
         Value = re.findall(TC_Input_Parameters.pattern_TC_Input_Parameters_value, str(chaine))
-        compare = re.findall(TC_Input_Parameters.pattern_TC_Input_Parameters_compare, str(chaine))
         new = TC_Input_Parameters()
         new.Name = Name[0][1].strip()
-        new.Type = type[0][1].strip()
+        new.Type = type2[0][1].strip()
         new.value = Value[0][1].strip()
-        new.compare = compare[0][1].strip()
-        new.Name = Name[0][1].strip()
+
 
 
 class TC_Return_Value:
@@ -91,17 +89,19 @@ class TC_Return_Value:
         self.Name = ''
         self.Type = ''
         self.Value = ''
-        self.compare = ''
 
     def extract_TC_Input_Return_Value_attributes(self, chaine):
         Name = re.findall(TC_Return_Value.pattern_Return_Value_Name, str(chaine))
         type = re.findall(TC_Return_Value.pattern_TC_Input_Parameters_Type, str(chaine))
         Value = re.findall(TC_Return_Value.pattern_TC_Input_Parameters_value, str(chaine))
-        compare = re.findall(TC_Input_Parameters.pattern_TC_Input_Parameters_compare, str(chaine))
+
+
         new = TC_Return_Value()
         new.Name = Name[0][1].strip()
         new.Type = type[0][1].strip()
-        new.value = Value[0][1].strip()
+        new.Value = Value[0][1].strip()
+
+
 
         return new
 
@@ -177,11 +177,10 @@ class TC_Stub:
             for j, stub in enumerate(result2):
 
                 new_stub = TC_Stub(self.doc)
-                new_stub.num=j+1
+
+                new_stub.num=i+1
 
                 stub_final = stub[1]
-
-
 
              #   temp1=re.findall(pattern,stub_final)
 
@@ -201,7 +200,7 @@ class TC_Stub:
                 if (result1):
 
                     new_TC_Hit_Count = TC_Hit().extract_TC_Hit_Count_attributes(result1[0][1])
-                    new_stub.TC_Hit.append(new_TC_Hit_Count)
+                    new_stub.TC_Hit_count.append(new_TC_Hit_Count)
 
 
                 pattern_Tc_input_in_stubs = "(# Begin TC Stub Input Params)([\s\S]*?)( # End TC Stub Input Params)"
@@ -211,7 +210,7 @@ class TC_Stub:
                     new_TC_Input_Parameters =TC_Input_Parameters().extract_Input_Parameters(result2[0][1])
                     new_stub.Input_Parameters.append(new_TC_Input_Parameters)
 
-                pattern_Tc_Return_Value = "(# Begin TC Stub Input Params)([\s\S]*?)( # End TC Stub Input Params)"
+                pattern_Tc_Return_Value = "(# Begin TC Stub Return Value)([\s\S]*?)(# End TC Stub Return Value)"
                 result3 = re.findall(pattern_Tc_Return_Value, stub_final)
 
                 if (result3):
@@ -383,23 +382,39 @@ class DOC:
         for i, stub in enumerate(self.stub_file):
             print('----****** Stubs ' + str(idx + 1) + ' ******----')
             print('\n')
+        l=len(self.stubs)
+        print('l=',l)
+
+        for idx, stub2 in enumerate(self.stubs):
+
+            for idx2, stub3 in enumerate(stub2.TC_Hit_count):
+                print(stub3.Setting)
+                print(stub3.specefied)
+                print('****************')
+
+        for idx2, stub5 in enumerate(self.stubs):
+
+            for idx3, stub6 in enumerate(stub5.Return_Value):
+                print('************************')
+                print(stub6.Name)
+                print(stub6.Type)
+                print(stub6.Value)
+
 
 
 
 
 doc = DOC()
 
-# doc.extract_doc_atrributes(ctf_file.read())
 
+ctf_file = open("test.tcf", "r")
 
 #TestCase(doc).extract_test_case(ctf_file.read())
 
-# doc.print_information()
 ctf_file = open("test.tcf", "r")
-
 TC_Stub(doc).extract_TC_Stub(ctf_file.read())
 
+#doc.print_information()
+
 ctf_file = open("test.tcf", "r")
-
-
-#stub(doc).extract_stubs(ctf_file.read())
+stub(doc).extract_stubs(ctf_file.read())
