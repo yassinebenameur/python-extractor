@@ -1,6 +1,6 @@
 from openpyxl import Workbook
 
-from Test import DOC, TestCase
+from Test import DOC, TestCase ,TC_Stub
 
 from Test import TC_Stub
 
@@ -198,12 +198,32 @@ for test_case in doc.test_cases:
           k=k+1
           ws[col + str(row)] = output_variable.Name
           ws[col + str(row+1)] = output_variable.Type
-          ws[col + str(row+2)] = 'output global'
+          if (output_variable.Usage=='H'):
+              ws[col + str(row+2)] = 'output global'
+          if (output_variable.Usage=='O'):
+               ws[col + str(row + 2)] = 'output Parameter'
+
           ws[col + str(row+3)] = output_variable.Value
+          ws[col + str(row+4)] = '!='
+          ws[col + str(row +5)] = 'Compare + Write'
+
           row = row + 7
       col=chr(ord(col)+1)
 
-print(row)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 wb.save('sample.xlsx')
