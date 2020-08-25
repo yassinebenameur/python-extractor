@@ -400,6 +400,15 @@ class DOC:
                 print(stub6.Type)
                 print(stub6.Value)
 
+        for stub7 in self.stubs:
+
+            for stub8 in stub7.Input_Parameters:
+                print('*******************')
+                print(stub8.Name)
+                print(stub8.Type)
+                print(stub8.value)
+
+
 
 
 
