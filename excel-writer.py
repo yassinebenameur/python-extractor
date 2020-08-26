@@ -1,8 +1,8 @@
 from openpyxl import Workbook
+from openpyxl.styles import PatternFill
 
-from Test import DOC, TestCase ,TC_Stub
+from Test import DOC, TestCase
 
-from Test import TC_Stub
 
 wb = Workbook()
 
@@ -15,6 +15,37 @@ doc.print_information()
 
 # grab the active worksheet
 ws = wb.active
+
+
+
+
+ws['B2'].fill = PatternFill(start_color='000000FF',end_color='000000FF',fill_type='solid')
+ws['C2'].fill = PatternFill(start_color='000000FF',end_color='000000FF',fill_type='solid')
+ws['B4'].fill = PatternFill(start_color='000000FF',end_color='000000FF',fill_type='solid')
+ws['B5'].fill = PatternFill(start_color='000000FF',end_color='000000FF',fill_type='solid')
+ws['B6'].fill = PatternFill(start_color='000000FF',end_color='000000FF',fill_type='solid')
+ws['B7'].fill = PatternFill(start_color='000000FF',end_color='000000FF',fill_type='solid')
+ws['B8'].fill = PatternFill(start_color='000000FF',end_color='000000FF',fill_type='solid')
+ws['B9'].fill = PatternFill(start_color='000000FF',end_color='000000FF',fill_type='solid')
+ws['B10'].fill = PatternFill(start_color='000000FF',end_color='000000FF',fill_type='solid')
+ws['B11'].fill = PatternFill(start_color='000000FF',end_color='000000FF',fill_type='solid')
+ws['B12'].fill = PatternFill(start_color='000000FF',end_color='000000FF',fill_type='solid')
+ws['B13'].fill = PatternFill(start_color='000000FF',end_color='000000FF',fill_type='solid')
+ws['B14'].fill = PatternFill(start_color='000000FF',end_color='000000FF',fill_type='solid')
+ws['B15'].fill = PatternFill(start_color='000000FF',end_color='000000FF',fill_type='solid')
+
+
+ws['C5'].fill = PatternFill(start_color='00333333',end_color='00333333',fill_type='solid')
+ws['C6'].fill = PatternFill(start_color='00333333',end_color='00333333',fill_type='solid')
+ws['C7'].fill = PatternFill(start_color='00333333',end_color='00333333',fill_type='solid')
+ws['C8'].fill = PatternFill(start_color='00333333',end_color='00333333',fill_type='solid')
+ws['C9'].fill = PatternFill(start_color='00333333',end_color='00333333',fill_type='solid')
+ws['C10'].fill = PatternFill(start_color='00333333',end_color='00333333',fill_type='solid')
+ws['C11'].fill = PatternFill(start_color='00333333',end_color='00333333',fill_type='solid')
+ws['C12'].fill = PatternFill(start_color='00333333',end_color='00333333',fill_type='solid')
+ws['C15'].fill = PatternFill(start_color='00333333',end_color='00333333',fill_type='solid')
+
+
 
 ws['B2'] = 'XLStoTCF_ISIT'
 ws['C2'] = doc.version
@@ -212,19 +243,4 @@ for test_case in doc.test_cases:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 wb.save('sample.xlsx')
-
